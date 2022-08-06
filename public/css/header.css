@@ -1,0 +1,15 @@
+.address{
+    margin: auto;
+    padding: 10px;
+    background-color: #f33232;
+    font-size: 20px;
+    color: #eeeeee;
+}
+a{
+
+    color: #eeeeee;
+}
+a:hover{
+    text-decoration: none;
+    color: #2eee5b;
+}
