@@ -1,8 +1,8 @@
 .address{
     margin: auto;
-    padding: 15px;
+    padding: 10px;
     background-color: #dc3545;
-    font-size: 22px;
+    font-size: 20px;
     color: #eeeeee;
 }
 a{
@@ -13,56 +13,6 @@ a:hover{
     text-decoration: none;
     color: #eeeeee;
 }
-.menu {
-    background-color: #fff;
-    width: 100%;
-    height: 60px;
-}
-.menu ul {
-    background-color: #fff;
-    text-align: center;
-    list-style: none;
-    font-size: 18px;
-
-}
-.menu ul li ul {
-    display: none;
-    opacity: 0;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    background-color: #fff;
-    transform: all .5s;
-
-
-}
-.menu ul li ul:hover {
-    display: block;
-    opacity: 1;
-}
-.menu ul li ul li {
-    width: 100%;
-}
-.menu ul li ul li ul {
-    position: absolute;
-    top: 0;
-    left: 100%;
-}
-.menu li {
-    width: 25%;
-    float: left;
-    position: relative;
-}
-.menu li a {
-    display: block;
-    color: #131313;
-    line-height: 60px;
-}
-.menu li a:hover {
-    background-color: #f0f0f0;
-    color: red;
-}
-.menu li a:hover + ul {
-    display: block;
-    opacity: 1;
+header{
+    background-color: #eeeeee;
 }

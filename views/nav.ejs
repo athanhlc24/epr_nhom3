@@ -1,3 +1,83 @@
 <nav class="section nav">
-    <div class="container">nav</div>
+    <div class="container">
+        <nav>
+            <div class="mega-menu menuClass">
+                <div class="mobile-nav-icon">
+                    <a class="" href="#">
+                        <span class="fa fa-bars"></span>
+                    </a>
+                </div>
+                <div class="main-links">
+                    <ul>
+                        <li><a data-submenu="products" href="#">Products</a></li>
+                        <li><a data-submenu="career" href="#">Career</a></li>
+                        <li><a data-submenu="resources"  href="#">Resources</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a data-submenu="support"  href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="menu-dropdown">
+                    <ul class="menu-item-wrapper" id="products">
+                        <li class="link-category">Something</li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                        <li class="link-category">Something</li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">products</a></li>
+                    </ul>
+
+                    <ul class="menu-item-wrapper dropdown" id="support">
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+
+                    <ul class="menu-item-wrapper" id="career">
+                        <li><a href="#">career</a></li>
+                        <li><a href="#">career</a></li>
+                        <li><a href="#">career</a></li>
+                        <li><a href="#">career</a></li>
+                    </ul>
+                    <ul class="menu-item-wrapper" id="resources">
+                        <li><a href="#">Resoiurces</a></li>
+                        <li><a href="#">Resoiurces</a></li>
+                        <li><a href="#">Resoiurces</a></li>
+                        <li><a href="#">Resoiurces</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script type="text/javascript" src="megamenu.js"> </script>
+
 </nav>
+<script type="text/javascript" src="megamenu.js">$(".mega-menu").megaMenu();</script>
+<script type="text/javascript" src="megamenu.js">$(".mega-menu").megaMenu({menuBehaviour: "mouseover"});</script>
+<script type="text/javascript" src="megamenu.js">$(".mega-menu").megaMenu({
+        caret:"",
+        caretArrows: [{
+            up: "",
+            down: "",
+            upUrl:"",
+            downUrl:"",
+        }]
+    });</script>
+<script type="text/javascript"src="megamenu.js">$(".mega-menu").megaMenu({
+        animation:true,
+        animationClass:"animated fadeIn"
+    });</script>
+<script type="text/javascript" src="megamenu.js">$(".mega-menu").megaMenu({
+        highlighter: true,
+        followingHighlighter: false,
+        highlightColor:"",
+        textHighlighterColor: ""
+    });
+</script>
