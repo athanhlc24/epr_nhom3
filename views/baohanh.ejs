@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BaoHanh</title>
+    <link rel="stylesheet" href="/css/service.css"/>
+
+</head>
+<%- include("css.ejs") %>
+
+
+<body>
+<%- include("header.ejs") %>
+<%- include("nav.ejs")%>
+<section class="section main">
+    <div class="container">
+        <div class="row">
+            <article class="content col-md-12">
+                <div class="col-md-3"><h5>Service & Workshop</h5></div>
+                <div class="col-md-9">
+                    <div class="dropdown service">
+                        <h5>
+                            <a id="dLabel" href="#" data-toggle="dropdown" aria-haspopup="true" aria-labelledby="dropdown-content" aria-expanded="false">
+                                Bao Hanh
+                                <span class="caret"></span>
+                            </a>
+                        </h5>
+                        <ul class="dropdown-menu" id="dropdown-content" aria-labelledby="dLabel">
+                            <li class="tab">1</li>
+                            <li class="tab">2</li>
+                        </ul>
+                    </div>
+                    <div class="service"><h5><a href="#" >Sua Chua & Cham Soc</a> </h5></div>
+                    <div class="service"><h5><a href="#" >Dich Vu </a> </h5></div>
+                    <div class="service"><h5><a href="#" >Phu Tung </a> </h5></div>
+                </div>
+
+
+            </article>
+        </div>
+    </div>
+</section>
+<%- include("footer.ejs")%>
+<script type="text/javascript" src="public/jQuery/jqueryv3.6.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
