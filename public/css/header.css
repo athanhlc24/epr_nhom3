@@ -1,18 +1,13 @@
-.address{
+.header{
     margin: auto;
     padding: 10px;
     background-color: #dc3545;
     font-size: 20px;
     color: #eeeeee;
+    text-align: center;
 }
-a{
+.header a {
     text-decoration: none;
     color: #eeeeee;
 }
-a:hover{
-    text-decoration: none;
-    color: #eeeeee;
-}
-header{
-    background-color: #eeeeee;
-}
+
