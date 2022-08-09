@@ -1,0 +1,17 @@
+.service{
+    float: left;
+    width: 25%;
+    text-align: center;
+
+}
+.service a{
+    color: gray;
+}
+.service h5 a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}

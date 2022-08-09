@@ -18,8 +18,11 @@ const conn = mysql.createConnection({
     multipleStatements: true
 
 });
-app.get("/home",function (req, res) {
+app.get("/",function (req, res) {
     res.render("home");
 });
+app.get("/baohanh",function (req,res){
+    res.render("baohanh")
+})
 
 
