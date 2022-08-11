@@ -1,0 +1,28 @@
+body{
+    background-color: #eeeeee;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+.list-selling-car{
+    float: left;
+    width: calc(33.33% - 22px);
+    border: 1px solid red;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.list-selling-car i {
+    color: #dc3545;
+}
+img{
+    max-width: 100%;
+
+}
+#selling{
+    text-align: center;
+    color: #dc3545;
+}
+.list-selling-car:hover{
+    box-shadow: 0 6px 6px red;
+}
