@@ -4,6 +4,9 @@ footer{
     font-size: 20px;
     background-image: url("../img/bg_ft.jpg");
 }
+footer li a {
+    color: #eeeeee;
+}
 .footer-trai{
     float: left;
     width: calc(50% - 62px);
