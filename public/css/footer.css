@@ -31,4 +31,7 @@ footer li a {
 .footer-phai ul {
     float:right;
 }
+a:hover {
+    color:#dc3545 ;
+}
 
