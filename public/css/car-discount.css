@@ -3,53 +3,52 @@ body{
     font-size: 14px;
     font-weight: 400;
     text-align: left;
+
 }
-.list-selling-car{
+.car-discount{
     float: left;
     width: calc(33.33% - 20px);
     margin: 10px;
     padding: 15px;
     border-radius: 15px;
 }
-.list-selling-car i {
+.car-discount i {
     color: #dc3545;
 }
 img{
     max-width: 100%;
 
 }
-#selling{
+#car-discount{
     text-align: center;
 }
-.list-selling-car:hover{
+.car-discount:hover{
     box-shadow: 0 5px 5px red;
-    box-sizing: border-box;
-
 }
-.title-border{
+.title-border2{
     background-color: #dc3545;
 }
-.title-border{
+.title-border2{
     height: 5px;
     width: 94px;
     border-radius: 10px;
     margin: 0 auto;
 }
-.title-border-inner{
+.title-border-inner2{
     height: 5px;
     width: 5px;
     animation: pulse 3s ease infinite alternate, nudge 5s linear infinite alternate;
     float: left;
     margin: 0 2px;
 }
-.title-border{
+.title-border2{
     height: 5px;
     width: 94px;
     border-radius: 10px;
     margin: 0 auto;
 }
 
-.title-border-inner {
+.title-border-inner2 {
     height: 5px;
     width: 5px;
     animation: pulse 3s ease infinite alternate, nudge 5s linear infinite alternate;
