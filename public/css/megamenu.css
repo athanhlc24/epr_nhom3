@@ -20,6 +20,7 @@ li {
 }
 .mega-menu .mobile-nav-icon {
   display: none;
+
 }
 .mega-menu.sticky-header {
   /*position: fixed;*/
@@ -29,6 +30,7 @@ li {
   text-decoration: none;
   color: #000000;
   border-bottom: 4px solid white;
+
 }
 .mega-menu .main-links {
   background-color: #ffffff;

@@ -1,12 +1,71 @@
-
-.lo-go{
-    margin: auto;
-    padding: 5px;
-    text-align: center;
+.hea-der{
     background-color: #dc3545;
-    font-size: 22px;
+}
+.lo-go h3{
+    text-align: left;
+    margin: 5px;
+    padding: 5px;
+    color: #eeeeee;
+
 }
 .lo-go a {
-    color: #eeeeee;
     text-decoration: none;
+}
+.box{
+    width:800px;
+}
+
+/* Search 1 - bg change*/
+.container-1{
+    width: 800px;
+    position: relative;
+
+}
+.container-1 input#search{
+    width: 800px;
+    height: 50px;
+    border: none;
+    background-color: #dc3545;
+    font-size: 16px;
+    float: left;
+    color: #eeeeee;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+    color: #eeeeee;
+}
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+    color: #eeeeee;
+}
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #eeeeee;
+}
+.container-1 input#search:-ms-input-placeholder {
+    color: #eeeeee;
+}
+
+.container-1 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 12px;
+    z-index: 1;
+    color: #eeeeee;
+    font-size: 16px;
+}
+
+/* ANIMATION EFFECTS */
+.container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+    background: #dc3545;
 }
