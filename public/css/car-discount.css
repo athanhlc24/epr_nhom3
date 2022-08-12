@@ -24,6 +24,9 @@ img{
 }
 .car-discount:hover{
     box-shadow: 0 5px 5px red;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+
 }
 .title-border2{
     background-color: #dc3545;

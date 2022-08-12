@@ -23,15 +23,20 @@ footer li a {
     margin: 15px;
     padding: 15px;
 }
-.footer-trai ul li{
+.footer-trai ul li {
     list-style: none;
+}
+.footer-trai ul li a {
+    text-decoration: none;
 }
 
 
 .footer-phai ul {
     float:right;
 }
+.footer-phai ul li a {
+    text-decoration: none;
+}
 a:hover {
     color:#dc3545 ;
 }
-
