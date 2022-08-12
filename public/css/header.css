@@ -1,13 +1,12 @@
-.header{
-    margin: auto;
-    padding: 10px;
-    background-color: #dc3545;
-    font-size: 20px;
-    color: #eeeeee;
-    text-align: center;
-}
-.header a {
-    text-decoration: none;
-    color: #eeeeee;
-}
 
+.lo-go{
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    background-color: #dc3545;
+    font-size: 22px;
+}
+.lo-go a {
+    color: #eeeeee;
+    text-decoration: none;
+}

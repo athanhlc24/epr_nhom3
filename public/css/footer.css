@@ -37,6 +37,6 @@ footer li a {
 .footer-phai ul li a {
     text-decoration: none;
 }
-a:hover {
+footer a:hover {
     color:#dc3545 ;
 }
