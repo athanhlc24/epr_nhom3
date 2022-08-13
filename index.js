@@ -18,11 +18,44 @@ const conn = mysql.createConnection({
     multipleStatements: true
 
 });
+var brandList =[];
+const sql_txt = "select * from brands";
+
+conn.query(sql_txt,function (err,data){
+    if(err) res.send("Not Found 404");
+    else{
+        brandList = data;
+
+    }
+});
 app.get("/",function (req, res) {
     res.render("home");
 });
 app.get("/baohanh",function (req,res){
-    res.render("baohanh")
-})
+    const BrName = req.query.BrName;
+    res.render("baohanh",{
+        "brandList":brandList,
+
+    });
+
+});
+app.get("/warranty",function (req,res){
+    const BrName = req.query.BrName;
+    const sql_txt = "select * from brands where BrName like '"+BrName+"'";
+
+    conn.query(sql_txt,function (err,data){
+        if(err) res.send("Not Found 404");
+        // res.send(data);
+        else{
+            var brandWarrantyList = data;
+
+            res.render("warranty",{
+            "brandWarrantyList":brandWarrantyList,
+                "brandList":brandList,
+            });
+        }
+    });
+
+});
 
 

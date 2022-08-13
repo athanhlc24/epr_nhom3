@@ -2,16 +2,22 @@
     float: left;
     width: 25%;
     text-align: center;
-
+    margin-top: 7px;
 }
 .service a{
     color: gray;
 }
-.service h5 a:hover{
-    color: black;
+.service a:hover{
+    color: red;
     text-decoration: none;
 }
 
 img {
     max-width: 100%;
+}
+.service ul li a:hover{
+    color: purple;
+}
+article{
+    background-image: url("/img/warranties.jpg");
 }
