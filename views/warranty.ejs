@@ -35,24 +35,28 @@
                         </ul>
                     </div>
                     <div class="dropdown service">
-                        <a href="#" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" id="dLabel1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Phu Tung
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <ul class="dropdown-menu" aria-labelledby="dLabel1">
                             <%for(var i =0;i<brandList.length;i++){%>
-                            <li><a href="/warranty?BrName=<%=brandList[i].BrName%>"><%=brandList[i].BrName%></a></li>
+                            <li><a href="/phutung?BrName=<%=brandList[i].BrName%>"><%=brandList[i].BrName%></a></li>
                             <%}%>
                         </ul>
                     </div>
                     <div class="service"><a href="#" >Sua Chua & Cham Soc</a></div>
                 </div>
-                <div class="col-md-12">
-                    <%for(var i =0;i<brandWarrantyList.length;i++){%>
+                <div class="col-md-12 warranty-content">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-8">
+                        <%for(var i =0;i<brandWarrantyList.length;i++){%>
 
-                    <p><%=brandWarrantyList[i].BrWarranty%></p>
+                        <p><%=brandWarrantyList[i].BrWarranty%></p>
 
-                    <%}%>
+                        <%}%>
+                    </div>
+
                 </div>
             </article>
         </div>

@@ -57,5 +57,23 @@ app.get("/warranty",function (req,res){
     });
 
 });
+app.get("/phutung",function (req,res){
+    const BrName = req.query.BrName;
+    const sql_txt = "select * from brands where BrName like '"+BrName+"'";
+
+    conn.query(sql_txt,function (err,data){
+        if(err) res.send("Not Found 404");
+        // res.send(data);
+        else{
+            var brandWarrantyList = data;
+
+            res.render("phutung",{
+                "brandWarrantyList":brandWarrantyList,
+                "brandList":brandList,
+            });
+        }
+    });
+
+});
 
 

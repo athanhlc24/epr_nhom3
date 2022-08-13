@@ -24,30 +24,35 @@
                 </div>
                 <div class="col-md-9">
                     <div class="dropdown service">
-                            <a href="#" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 Warranties
-                                <span class="caret"></span>
-                            </a>
+                        <a href="#" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Warranties
+                            <span class="caret"></span>
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">
                             <%for(var i =0;i<brandList.length;i++){%>
                             <li><a href="/warranty?BrName=<%=brandList[i].BrName%>"><%=brandList[i].BrName%></a></li>
                             <%}%>
                         </ul>
                     </div>
-                     <div class="dropdown service">
-                            <a href="#" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 Phu Tung
-                                <span class="caret"></span>
-                            </a>
-                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <div class="dropdown service">
+                        <a href="#" id="dLabel1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Phu Tung
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel1">
                             <%for(var i =0;i<brandList.length;i++){%>
-                            <li><a ref="/phutung?BrName=<%=brandList[i].BrName%>"><%=brandList[i].BrName%></a></li>
+                            <li><a href="/phutung?BrName=<%=brandList[i].BrName%>"><%=brandList[i].BrName%></a></li>
                             <%}%>
                         </ul>
                     </div>
                     <div class="service"><a href="#" >Sua Chua & Cham Soc</a></div>
                 </div>
-                <div>
+                <div class="col-md-12">
+                    <%for(var i =0;i<brandWarrantyList.length;i++){%>
+
+                    <p><%=brandWarrantyList[i].BrOrigin%></p>
+
+                    <%}%>
                 </div>
             </article>
         </div>

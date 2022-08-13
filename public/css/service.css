@@ -18,6 +18,6 @@ img {
 .service ul li a:hover{
     color: purple;
 }
-article{
-    background-image: url("/img/warranties.jpg");
+.warranty-content{
+    text-align: left;
 }
