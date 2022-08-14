@@ -69,3 +69,18 @@
     outline:none;
     background: #dc3545;
 }
+/* Mui ten lên dau trang */
+
+#top-up {
+    font-size: 3rem;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    color:#004993;
+    bottom: 20px;
+    right: 15px;
+    display: none;
+}
+#top-up:hover {
+    color: burlywood;
+}
