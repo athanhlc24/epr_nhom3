@@ -27,6 +27,9 @@ img{
 #list{
     text-align: center;
 }
+h4{
+    color: #dc3545;
+}
 .list-product:hover{
 
     -webkit-transform: translateY(-5px);
