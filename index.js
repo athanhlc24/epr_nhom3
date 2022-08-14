@@ -75,5 +75,18 @@ app.get("/phutung",function (req,res){
     });
 
 });
+app.get("/list-product",function (req, res) {
+    const sql_list ="select Name,Price from cars";
+    conn.query(sql_list,function (err,data) {
+        if (err) res.send("404 NOT FOUND");
+        else{
+            var listProduct = data;
+            res.render("list-product",{
+                "listProduct": listProduct
+            })
+        }
+        
+    })
+});
 
 
