@@ -30,11 +30,20 @@ conn.query(sql_txt,function (err,data){
 app.get("/",function (req, res) {
     res.render("home");
 });
+app.get("/creation",function (req, res) {
+    res.render("creation");
+});
+app.get("/aboutus",function (req, res) {
+    res.render("aboutus");
+});
+app.get("/design",function (req, res) {
+    res.render("design");
+});
+
 app.get("/baohanh",function (req,res){
     const BrName = req.query.BrName;
     res.render("baohanh",{
         "brandList":brandList,
-
     });
 
 });
