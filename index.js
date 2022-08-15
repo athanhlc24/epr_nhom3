@@ -25,7 +25,6 @@ conn.query(sql_txt,function (err,data){
     if(err) res.send("Not Found 404");
     else{
         brandList = data;
-
     }
 });
 app.get("/",function (req, res) {

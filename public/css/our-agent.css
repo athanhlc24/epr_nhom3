@@ -1,9 +1,4 @@
-body{
-    background-color: #eeeeee;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: left;
-}
+
 .agent{
     float: left;
     width: calc(25% - 20px);
