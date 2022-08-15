@@ -1,9 +1,4 @@
-body{
-    background-color: #eeeeee;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: left;
-}
+
 .list-selling-car{
     float: left;
     width: calc(33.33% - 20px);
