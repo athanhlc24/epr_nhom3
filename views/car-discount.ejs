@@ -10,79 +10,22 @@
             <div class="title-border-inner2"></div>
         </div>
 
-        <div class="car-discount col-md-4">
+        <%for (var i=0;i<bestList.length;i++){%>
+        <%if(bestList[i].HotCars == 0){%>
+        <div class="list-selling-car col-md-4">
             <a href="#">
                 <div class="thumb">
                     <img src="/demo-list/demo-list.png"/>
                 </div>
             </a>
-            <h4> Tên xe: </h4>
-            <p><i class="fa-solid fa-gas-pump"></i> Máy gì:</p>
-            <p><i class="fa-solid fa-calendar-days"></i> Năm sản xuất: </p>
-            <p><i class="fa-solid fa-dollar-sign"></i> Giá: </p>
+            <h4> Tên xe:<%=bestList[i].Name%> </h4>
+            <p><i class="fa-solid fa-gas-pump"></i> Máy:<%=bestList[i].Fueltype%></p>
+            <p><i class="fa-solid fa-calendar-days"></i> Năm sản xuất: <%=bestList[i].Year%></p>
+            <p><i class="fa-solid fa-dollar-sign"></i> Giá:<%=bestList[i].Price *90/100; %> </p>
 
         </div>
-
-        <div class="car-discount col-md-4">
-            <a href="#">
-                <div class="thumb">
-                    <img src="/demo-list/demo-list.png"/>
-                </div>
-            </a>
-            <h4> Tên xe: </h4>
-            <p><i class="fa-solid fa-gas-pump"></i> Máy gì:</p>
-            <p><i class="fa-solid fa-calendar-days"></i> Năm sản xuất: </p>
-            <p><i class="fa-solid fa-dollar-sign"></i> Giá: </p>
-
-        </div>
-
-        <div class="car-discount col-md-4">
-            <a href="#">
-                <div class="thumb">
-                    <img src="/demo-list/demo-list.png"/>
-                </div>
-            </a>
-            <h4> Tên xe: </h4>
-            <p><i class="fa-solid fa-gas-pump"></i> Máy gì:</p>
-            <p><i class="fa-solid fa-calendar-days"></i> Năm sản xuất: </p>
-            <p><i class="fa-solid fa-dollar-sign"></i> Giá: </p>
-
-        </div>
-        <div class="car-discount col-md-4">
-            <a href="#">
-                <div class="thumb">
-                    <img src="/demo-list/demo-list.png"/>
-                </div>
-            </a>
-            <h4> Tên xe: </h4>
-            <p><i class="fa-solid fa-gas-pump"></i> Máy gì:</p>
-            <p><i class="fa-solid fa-calendar-days"></i> Năm sản xuất: </p>
-            <p><i class="fa-solid fa-dollar-sign"></i> Giá: </p>
-
-        </div>
-
-        <div class="car-discount col-md-4">
-            <a href="#">
-                <div class="thumb">
-                    <img src="/demo-list/demo-list.png"/>
-                </div>
-            </a>
-            <h4> Tên xe: </h4>
-            <p><i class="fa-solid fa-gas-pump"></i> Máy gì:</p>
-            <p><i class="fa-solid fa-calendar-days"></i> Năm sản xuất: </p>
-            <p><i class="fa-solid fa-dollar-sign"></i> Giá: </p>
-        </div>
-        <div class="car-discount col-md-4">
-            <a href="#">
-                <div class="thumb">
-                    <img src="/demo-list/demo-list.png"/>
-                </div>
-            </a>
-            <h4> Tên xe: </h4>
-            <p><i class="fa-solid fa-gas-pump"></i> Máy gì:</p>
-            <p><i class="fa-solid fa-calendar-days"></i> Năm sản xuất: </p>
-            <p><i class="fa-solid fa-dollar-sign"></i> Giá: </p>
-        </div>
+        <%}%>
+        <%}%>
     </div>
 </div>
 </body>
