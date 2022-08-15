@@ -98,5 +98,18 @@ app.get("/list-product",function (req, res) {
 
     });
 });
+app.get("/car-price-list",function (req, res) {
+    const sql_list ="select Name,Price from cars";
+    conn.query(sql_list,function (err,data) {
+        if (err) res.send("404 NOT FOUND");
+        else{
+            var carPriceList = data;
+            res.render("car-price-list",{
+                "carPriceList": carPriceList
+            })
+        }
+
+    })
+});
 
 
