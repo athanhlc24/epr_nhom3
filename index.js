@@ -28,7 +28,9 @@ conn.query(sql_txt,function (err,data){
     }
 });
 app.get("/",function (req, res) {
-    res.render("home");
+    res.render("home",{
+        "brandList":brandList,
+    });
 });
 app.get("/creation",function (req, res) {
     res.render("creation");
@@ -84,16 +86,38 @@ app.get("/phutung",function (req,res){
 
 });
 app.get("/list-product",function (req, res) {
+    const BrName = req.query.BrName;
+    const sql_list ="select * from cars where BrID in(select BrID from brands where BrName like '"+BrName+"');"+
+        "select BodyStyle from bodystyles inner join cars on bodystyles.BdID = cars.BdID where BrID in(select BrID from brands where BrName like '"+BrName+"');"+
+        "select Fueltype from fueltypes inner join  cars on fueltypes.FtID = cars.FtID where BrID in(select BrID from brands where BrName like '"+BrName+"')";
+    conn.query(sql_list,function (err,data) {
+        if (err) res.send("404 NOT FOUND");
+        // res.send(data)
+        else{
+            var listProduct = data[0];
+            var bodyList = data[1];
+            var fuelList = data[2];
+            res.render("list-product",{
+                "brandList":brandList,
+                "listProduct": listProduct,
+                "bodyList":bodyList,
+                "fuelList":fuelList,
+            })
+        }
+
+    });
+});
+app.get("/car-price-list",function (req, res) {
     const sql_list ="select Name,Price from cars";
     conn.query(sql_list,function (err,data) {
         if (err) res.send("404 NOT FOUND");
         else{
-            var listProduct = data;
-            res.render("list-product",{
-                "listProduct": listProduct
+            var carPriceList = data;
+            res.render("car-price-list",{
+                "carPriceList": carPriceList
             })
         }
-        
+
     })
 });
 

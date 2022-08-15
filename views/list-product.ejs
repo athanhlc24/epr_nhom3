@@ -26,17 +26,20 @@
                 </div>
 
                 <% for (var i = 0; i < listProduct.length;i++){%>
+
                     <div class="col-md-3.5 list-product">
                      <a href="#">
                          <div class="thumb">
                              <img src="/demo-list/demo-list.png"/>
                          </div>
-
                      </a>
-                    <h4> Tên xe: <%= listProduct[i].Name%></h4>
-                    <p><i class="fa-solid fa-dollar-sign"></i> Giá:<%= listProduct[i].Price%> </p>
+                    <h4> <%= listProduct[i].Name%></h4>
+                    <p><i class="fa-solid fa-dollar-sign"></i> <%= listProduct[i].Price%> </p>
+                        <p><%=bodyList[i].BodyStyle%></p>
+                        <p><%=fuelList[i].Fueltype%></p>
                      </div>
-            <%}%>
+                <%}%>
+
                 <div class="col-md-1.5 sort">
                      <form>
                          <select name="thanhpho">
