@@ -201,6 +201,7 @@ li {
 }
 .mega-menu .menu-dropdown .menu-item-wrapper.dropdown.active {
   display: block;
+  top: 55px;
 }
 .mega-menu .menu-dropdown .menu-item-wrapper.dropdown li {
   margin-right: 0;
