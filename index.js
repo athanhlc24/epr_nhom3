@@ -37,7 +37,7 @@ conn.query(sql_car,function (err,data){
     }
 });
 function search(e){
-        e.value
+    e.value
 }
 app.get("/",function (req, res) {
     const sql_txt ="select Name,Year,Price,HotCars,Fueltype from cars inner join fueltypes on cars.FtID = fueltypes.FtID" ;
@@ -154,5 +154,3 @@ app.get("/search",function(req,res) {
         }
     })
 });
-
-
