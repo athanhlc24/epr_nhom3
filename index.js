@@ -33,6 +33,11 @@ app.get("/creation",function (req, res) {
         "brandList": brandList,
     });
 });
+app.get("/develop",function (req, res) {
+    res.render("develop",{
+        "brandList": brandList,
+    });
+});
 app.get("/aboutus",function (req, res) {
     res.render("aboutus",{
         "brandList": brandList,
