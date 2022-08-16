@@ -14,12 +14,11 @@
 
             </div>
             <div class="menu-dropdown">
-
                 <ul class="menu-item-wrapper dropdown" id="car-line">
+                    <li><a href="/product">All</a></li>
                     <%for(var i=0;i<brandList.length;i++){%>
                     <li><a href="/list-product?BrName=<%= brandList[i].BrName%>"><%= brandList[i].BrName%></a></li>
                     <%}%>
-
                 </ul>
                 <ul class="menu-item-wrapper dropdown" id="car-buying-advice">
                     <li><a href="#">Sign up for a test drive</a></li>
@@ -27,14 +26,13 @@
                     <li><a href="/car-price-list">Car price list</a></li>
                 </ul>
                 <ul class="menu-item-wrapper dropdown" id="service">
-                    <li><a href="#">Repair</a></li>
-                    <li><a href="#">Insurance</a></li>
+                    <li><a href="/baohanh">Repair</a></li>
                     <li><a href="#">Accessary</a></li>
                 </ul>
                 <ul class="menu-item-wrapper dropdown" id="car-world">
-                    <li><a href="#">Creation</a></li>
-                    <li><a href="#">Design and ideas</a></li>
-                    <li><a href="#">Develop</a></li>
+                    <li><a href="/creation">Creation</a></li>
+                    <li><a href="/design">Design and ideas</a></li>
+                    <li><a href="/develop">Develop</a></li>
                 </ul>
 
             </div>
