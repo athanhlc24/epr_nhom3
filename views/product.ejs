@@ -24,35 +24,25 @@
             <div class="title-border-inner"></div>
             <div class="title-border-inner"></div>
         </div>
-
-        <% for (var i = 0; i < searchList.length;i++){%>
-
+        <% for (var i = 0; i < carsList.length;i++){%>
             <div class="col-md-3.5 list-product">
                 <a href="#">
                     <div class="thumb">
                         <img src="/demo-list/demo-list.png"/>
                     </div>
                 </a>
-                <h4> <%= searchList[i].Name%></h4>
-                <p><i class="fa-solid fa-dollar-sign"></i> <%= searchList[i].Price%> </p>
-                <p><%=searchList[i].BodyStyle%></p>
-                <p><%=searchList[i].Fueltype%></p>
+                <h4> <%= carsList[i].BrName%> <%= carsList[i].Name%></h4>
+                <p><i class="fa-solid fa-dollar-sign"></i> <%= carsList[i].Price%> </p>
+                <p><%=carsList[i].BodyStyle%></p>
+                <p><%=carsList[i].Fueltype%></p>
             </div>
         <%}%>
-
         <div class="col-md-1.5 sort">
             <form>
-                <select name="price">
-                    <option  value="hn">Low to high</option>
-                    <option  value="sg">High to low</option>
-                </select>
-            </form>
-        </div>
-        <div class="col-md-1.5 sort">
-            <form>
-                <select name="bodystyle">
-                    <option  value="hn">suv</option>
-                    <option  value="sg">sedan</option>
+                <select name="thanhpho">
+                    <option value="">Sort</option>
+                    <option value="hn">Low to high</option>
+                    <option value="sg">High to low</option>
                 </select>
             </form>
         </div>
