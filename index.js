@@ -27,28 +27,47 @@ conn.query(sql_txt,function (err,data){
         brandList = data;
     }
 });
-app.get("/",function (req, res) {
-    res.render("home",{
-        "brandList":brandList,
-    });
-});
+
 app.get("/creation",function (req, res) {
-    res.render("creation");
+    res.render("creation",{
+        "brandList": brandList,
+    });
 });
 app.get("/aboutus",function (req, res) {
-    res.render("aboutus");
+    res.render("aboutus",{
+        "brandList": brandList,
+    });
 });
 app.get("/design",function (req, res) {
-    res.render("design");
+    res.render("design",{
+        "brandList": brandList,
+    });
 });
-
-app.get("/baohanh",function (req,res){
+app.get("/baohanh",function (req,res) {
     const BrName = req.query.BrName;
-    res.render("baohanh",{
-        "brandList":brandList,
+    res.render("baohanh", {
+        "brandList": brandList,
+    });
+});
+app.get("/",function (req, res) {
+        const sql_txt ="select Name,Year,Price,HotCars,Fueltype from cars inner join fueltypes on cars.FtID = fueltypes.FtID" ;
+
+        conn.query(sql_txt,function (err,data){
+            if(err) res.send("Not Found 404");
+            // res.send(data);
+            else{
+                var bestList = data;
+
+
+                res.render("home",{
+                    "brandList":brandList,
+                    "bestList":bestList,
+                });
+            }
+        })
+
     });
 
-});
 app.get("/warranty",function (req,res){
     const BrName = req.query.BrName;
     const sql_txt = "select * from brands where BrName like '"+BrName+"'";
