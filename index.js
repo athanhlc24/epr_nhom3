@@ -33,11 +33,6 @@ app.get("/creation",function (req, res) {
         "brandList": brandList,
     });
 });
-app.get("/develop",function (req, res) {
-    res.render("develop",{
-        "brandList": brandList,
-    });
-});
 app.get("/aboutus",function (req, res) {
     res.render("aboutus",{
         "brandList": brandList,
@@ -142,21 +137,6 @@ app.get("/car-price-list",function (req, res) {
             })
         }
 
-    })
-});
-app.get("/search",function(req,res) {
-    const search = req.query.search
-    const sql_search = "select * from cars inner join brands on cars.BrID=brands.BrID inner join bodystyles on cars.BdID=bodystyles.BdID inner join fueltypes  on cars.FtID=fueltypes.FtID where Name like '%"+search+"%' or BodyStyle like '%"+search+"%' or Fueltype like '%"+search+"%' or BrName like '%"+search+"%' or Year like '"+search+"' ";
-    // res.send(sql_search)
-    conn.query(sql_search, function (err, data) {
-        if (err) res.send("404 Not Found");
-        else {
-            var searchList = data;
-            res.render("search", {
-                "searchList": searchList,
-                "brandList":brandList,
-            })
-        }
     })
 });
 
