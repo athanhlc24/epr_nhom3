@@ -113,7 +113,7 @@ app.get("/list-product",function (req, res) {
     });
 });
 app.get("/product",function (req,res) {
-    const sql_pro = "select * from cars inner join brands on cars.BrID=brands.BrID"
+    const sql_pro = "select * from cars inner join brands on cars.BrID=brands.BrID inner join bodystyles on cars.BdID=bodystyles.BdID inner join fueltypes  on cars.FtID=fueltypes.FtID";
     conn.query(sql_pro, function (err, data) {
         if (err) res.send("404 NOT FOUND");
         else{
