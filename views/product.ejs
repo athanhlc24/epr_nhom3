@@ -24,17 +24,17 @@
             <div class="title-border-inner"></div>
             <div class="title-border-inner"></div>
         </div>
-        <% for (var i = 0; i < carsList.length;i++){%>
+        <% for (var i = 0; i < carList.length;i++){%>
             <div class="col-md-3.5 list-product">
                 <a href="#">
                     <div class="thumb">
                         <img src="/demo-list/demo-list.png"/>
                     </div>
                 </a>
-                <h4> <%= carsList[i].BrName%> <%= carsList[i].Name%></h4>
-                <p><i class="fa-solid fa-dollar-sign"></i> <%= carsList[i].Price%> </p>
-                <p><%=carsList[i].BodyStyle%></p>
-                <p><%=carsList[i].Fueltype%></p>
+                <h4> <%= carList[i].BrName%> <%= carList[i].Name%></h4>
+                <p><i class="fa-solid fa-dollar-sign"></i> <%= carList[i].Price%> </p>
+                <p><%=carList[i].BodyStyle%></p>
+                <p><%=carList[i].Fueltype%></p>
             </div>
         <%}%>
         <div class="col-md-1.5 sort">

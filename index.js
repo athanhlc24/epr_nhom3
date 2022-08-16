@@ -58,13 +58,24 @@ app.get("/",function (req, res) {
 
 });
 app.get("/creation",function (req, res) {
-    res.render("creation");
+    res.render("creation",{
+        "brandList":brandList,
+    });
 });
 app.get("/aboutus",function (req, res) {
-    res.render("aboutus");
+    res.render("aboutus",{
+        "brandList":brandList,
+    });
 });
 app.get("/design",function (req, res) {
-    res.render("design");
+    res.render("design",{
+        "brandList":brandList,
+    });
+});
+app.get("/develop",function (req, res) {
+    res.render("develop",{
+        "brandList":brandList,
+    });
 });
 
 app.get("/baohanh",function (req,res){
@@ -79,6 +90,7 @@ app.get("/list-product",function (req, res) {
     const BrName = req.query.BrName;
     const search = req.query.search
     const sql_list ="select * from cars where BrID in(select BrID from brands where BrName like '"+BrName+"');"+
+        "select BrName from brands where BrName like '"+BrName+"';"+
         "select BodyStyle from bodystyles inner join cars on bodystyles.BdID = cars.BdID where BrID in(select BrID from brands where BrName like '"+BrName+"');"+
         "select Fueltype from fueltypes inner join  cars on fueltypes.FtID = cars.FtID where BrID in(select BrID from brands where BrName like '"+BrName+"')";
     conn.query(sql_list,function (err,data) {
@@ -86,17 +98,32 @@ app.get("/list-product",function (req, res) {
         // res.send(data)
         else{
             var listProduct = data[0];
-            var bodyList = data[1];
-            var fuelList = data[2];
+            var bodyList = data[2];
+            var fuelList = data[3];
+            var brnameList =data[1][0];
             res.render("list-product",{
                 "brandList":brandList,
                 "listProduct": listProduct,
                 "bodyList":bodyList,
                 "fuelList":fuelList,
+                "brnameList":brnameList
             })
         }
 
     });
+});
+app.get("/product",function (req,res) {
+    const sql_pro = "select * from cars inner join brands on cars.BrID=brands.BrID"
+    conn.query(sql_pro, function (err, data) {
+        if (err) res.send("404 NOT FOUND");
+        else{
+            var carList=data;
+            res.render("product", {
+                "brandList": brandList,
+                "carList": carList
+            })
+        }
+    })
 });
 app.get("/car-price-list",function (req, res) {
     const sql_list ="select Name,Price from cars";
